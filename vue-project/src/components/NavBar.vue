@@ -32,6 +32,7 @@ import { RouterLink, RouterView } from "vue-router";
           </li>
         </ul>
       </div>
+      <div>Total: {{ totalPrice }}</div>
     </div>
   </nav>
   <RouterView />
