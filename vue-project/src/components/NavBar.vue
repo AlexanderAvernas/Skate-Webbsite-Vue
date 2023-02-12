@@ -32,17 +32,11 @@ import { RouterLink, RouterView } from "vue-router";
           </li>
         </ul>
       </div>
-      <div>Total: {{ totalPrice }}</div>
     </div>
   </nav>
   <RouterView />
 </template>
 
 <style scoped>
-nav {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
+
 </style>
