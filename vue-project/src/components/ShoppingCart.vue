@@ -75,7 +75,5 @@ h1 {
 }
 .primary-button {
   margin-bottom: 1rem;
-  background-color: black;
-  color: white;
 }
 </style>

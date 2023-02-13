@@ -9,13 +9,13 @@
 
 
   <div class="newsletter-heading">
-  <h1>Subskribe on our newsletter</h1></div>
+  <h1>Subscribe on our newsletter</h1></div>
   <div class="form-container">
 
     <div class="form-cover">
       <div class="text-name">
         <h6>
-          We send the catalog to <strong> {{ fullname }} </strong>
+          We send it to <strong> {{ fullname }} </strong>
         </h6>
       </div>
 

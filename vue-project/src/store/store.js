@@ -1,10 +1,23 @@
-// import Vue from "vue";
-// import Vuex from "vuex";
+// import { createStore } from 'vuex';
 
-// Vue.use(Vuex);
-
-// export default new Vuex.Store({
+// export default createStore({
+//   state: {
+//     totalPrice: 0
 //   },
 //   mutations: {
-
+//     setTotalPrice(state, price) {
+//       state.totalPrice = price;
+//     }
+//   }
 // });
+
+
+// import store from './store';
+
+// export default {
+//   computed: {
+//     totalPrice() {
+//       return store.state.totalPrice;
+//     }
+//   }
+// };
