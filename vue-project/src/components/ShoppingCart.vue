@@ -1,6 +1,8 @@
 <template>
   <h1>SKATEBOARDS</h1>
   <p>Total: {{ totalPrice }}SEK</p>
+  <p>Antal Produkter {{ trackCounter }}</p>
+
 
   <div class="col">
     <div class="card">
@@ -11,9 +13,23 @@
           <h6 class="card-text">{{ product.price }}</h6>
         </div>
         <div>
-          <button class="primary-button" @click="addToCart(product.id)">
+          <button
+            class="primary-button"
+            @click="
+              incrementCounter();
+              addToCart(product.id);
+            "
+          >
             Add To Cart
           </button>
+          <button class="primary-button"
+    @click="
+      decrementCounter();
+      subtracFromCart(product.id);
+    "
+  >
+    -
+  </button>
         </div>
       </div>
       <div></div>
@@ -41,6 +57,22 @@ export default {
       const product = this.products.find((product) => product.id === id);
       const price = parseFloat(product.price.replace(/kr|SEK/, ""));
       this.totalPrice += price;
+    },
+    subtracFromCart(id) {
+      const product = this.products.find((product) => product.id === id);
+      const price = parseFloat(product.price.replace(/kr|SEK/, ""));
+      this.totalPrice -= price;
+    },
+    incrementCounter() {
+      this.$store.dispatch("increment", 1);
+    },
+    decrementCounter() {
+      this.$store.dispatch("increment", -1);
+    },
+  },
+  computed: {
+    trackCounter() {
+      return this.$store.getters.getCounter;
     },
   },
 };

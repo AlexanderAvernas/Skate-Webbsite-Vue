@@ -37,6 +37,6 @@ import { RouterLink, RouterView } from "vue-router";
   <RouterView />
 </template>
 
-<style scoped>
+<script></script>
 
-</style>
+<style scoped></style>

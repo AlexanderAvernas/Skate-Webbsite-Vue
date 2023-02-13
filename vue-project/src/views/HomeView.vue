@@ -7,5 +7,5 @@ import FormUser from "../components/FormUser.vue";
 <template>
   <HeroImage />
   <ProductImage />
-  <FormUser/>
+  <FormUser />
 </template>

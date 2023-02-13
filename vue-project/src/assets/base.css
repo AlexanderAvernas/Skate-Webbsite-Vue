@@ -30,13 +30,13 @@
   width: auto;
 }
 
-.button-23:focus-visible {
+.primaty-button:focus-visible {
   box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
   transition: box-shadow .2s;
 }
 
-.button-23:active {
-  background-color: #F7F7F7;
+.primary-button:active {
+  background-color: #c1b7b7;
   border-color: #000000;
   transform: scale(.96);
 }

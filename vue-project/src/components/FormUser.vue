@@ -7,11 +7,10 @@
     <button @click="volume--">Decrease</button>
   </div>
 
-
   <div class="newsletter-heading">
-  <h1>Subscribe on our newsletter</h1></div>
+    <h1>Subscribe on our newsletter</h1>
+  </div>
   <div class="form-container">
-
     <div class="form-cover">
       <div class="text-name">
         <h6>
@@ -35,7 +34,9 @@
           >
         </div>
         <div class="form-group">
-          <label class="sr-only" for="inlineFormInputGroup">Email: {{ last }}</label>
+          <label class="sr-only" for="inlineFormInputGroup"
+            >Email: {{ last }}</label
+          >
           <div class="input-group mb-2">
             <div class="input-group-prepend">
               <div class="input-group-text">@</div>
@@ -56,8 +57,6 @@
           >
         </div>
         <button type="submit" class="primary-button">Submit</button>
-
-
       </form>
     </div>
   </div>
@@ -74,7 +73,7 @@ export default {
   },
   computed: {
     fullname: function () {
-      return this.first+'@'+""+ this.last;
+      return this.first + "@" + "" + this.last;
     },
   },
   watch: {
@@ -88,13 +87,11 @@ export default {
 </script>
 
 <style scoped>
-
 .newsletter-heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh
-    ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
 }
 
 .text-name {
@@ -125,10 +122,8 @@ export default {
   margin-top: 0rem;
 }
 
-
 .form-group {
   margin: 0.5em 5em;
-
 }
 
 .primary-button {
