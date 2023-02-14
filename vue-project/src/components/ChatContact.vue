@@ -42,6 +42,7 @@ const addMessage = () => {
 
 <style scoped>
 main {
+  margin-top: 10rem;
   height: 5vh;
   width: 5vw;
 }
@@ -65,8 +66,7 @@ h1 {
 }
 
 header button {
-  position: -webkit-sticky;
-  position: fixed;
+  position: relative;
   bottom: 2%;
   right: 2%;
   border: none;
@@ -90,7 +90,7 @@ header button {
   width: 100%;
   height: 50%;
   background-color: rgba(0, 0, 0, 0.77);
-  z-index: 10;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: center;

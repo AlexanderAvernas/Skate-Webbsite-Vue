@@ -14,6 +14,7 @@
 </template>
 
 <style scoped>
+
 #container-hero {
   position: relative;
   margin: 0 auto;
@@ -28,4 +29,7 @@
   text-align: center;
   color: rgb(255, 255, 255);
 }
+
+
+
 </style>

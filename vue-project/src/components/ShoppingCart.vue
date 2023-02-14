@@ -3,7 +3,6 @@
   <p>Total: {{ totalPrice }}SEK</p>
   <p>Antal Produkter {{ trackCounter }}</p>
 
-
   <div class="col">
     <div class="card">
       <div class="products-shop" v-for="product in products" :key="product.id">
@@ -22,14 +21,15 @@
           >
             Add To Cart
           </button>
-          <button class="primary-button"
-    @click="
-      decrementCounter();
-      subtracFromCart(product.id);
-    "
-  >
-    -
-  </button>
+          <button
+            class="primary-button"
+            @click="
+              decrementCounter();
+              subtracFromCart(product.id);
+            "
+          >
+            -
+          </button>
         </div>
       </div>
       <div></div>
@@ -61,13 +61,19 @@ export default {
     subtracFromCart(id) {
       const product = this.products.find((product) => product.id === id);
       const price = parseFloat(product.price.replace(/kr|SEK/, ""));
-      this.totalPrice -= price;
+      if (this.totalPrice - price >= 0) {
+        this.totalPrice -= price;
+      }
     },
     incrementCounter() {
-      this.$store.dispatch("increment", 1);
+      if (this.$store.getters.getCounter + 1 >= 0) {
+        this.$store.dispatch("increment", 1);
+      }
     },
     decrementCounter() {
-      this.$store.dispatch("increment", -1);
+      if (this.$store.getters.getCounter - 1 >= 0) {
+        this.$store.dispatch("increment", -1);
+      }
     },
   },
   computed: {
