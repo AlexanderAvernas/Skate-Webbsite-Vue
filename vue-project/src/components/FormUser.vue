@@ -1,14 +1,6 @@
 <template>
-  <h2>Volum</h2>
-  <h3>Current {{ volume }}</h3>
-
-  <div>
-    <button @click="volume++">Increase</button>
-    <button @click="volume--">Decrease</button>
-  </div>
-
   <div class="newsletter-heading">
-    <h1>Subscribe on our newsletter</h1>
+    <h1>Subscribe to our newsletter</h1>
   </div>
   <div class="form-container">
     <div class="form-cover">
@@ -29,9 +21,6 @@
             aria-describedby="emailHelp"
             placeholder="Name"
           />
-          <small id="emailHelp" class="form-text text-muted"
-            >We'll never share your email with anyone else.</small
-          >
         </div>
         <div class="form-group">
           <label class="sr-only" for="inlineFormInputGroup"
@@ -60,6 +49,24 @@
       </form>
     </div>
   </div>
+
+  <div class="range-form-container">
+    <h3>How do you like our website?</h3>
+  </div>
+  <div class="range-container">
+    <input
+      type="range"
+      class="form-range"
+      min="0"
+      max="5"
+      step="1"
+      id="customRange3"
+      v-model="volume"
+    />
+  </div>
+  <div class="number">
+    <h3>{{ volume }}</h3>
+  </div>
 </template>
 
 <script>
@@ -76,17 +83,19 @@ export default {
       return this.first + "@" + "" + this.last;
     },
   },
-  watch: {
-    volume(newValue, oldValue) {
-      if (newValue > oldValue && newValue === 1) {
-        alert("wow");
-      }
+  methods: {
+    updateVolume(e) {
+      this.volume = e.target.value;
     },
   },
 };
 </script>
 
 <style scoped>
+h1 {
+  margin-top: 5vh;
+}
+
 .newsletter-heading {
   display: flex;
   justify-content: center;
@@ -113,25 +122,103 @@ export default {
 .form-cover {
   border-radius: 1em;
   background-image: url(../assets/img/boyskate.jpg);
-  height: 70vh;
+  height: auto;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 50%;
+  width: 90%;
   height: 100%;
   margin-top: 0rem;
 }
 
 .form-group {
-  margin: 0.5em 5em;
+  margin: 0.5em 1em;
 }
 
 .primary-button {
-  margin: 1em;
+  margin: 0.5em;
 }
 
 label {
   color: white;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.range-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+.range-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-range {
+  width: 50%;
+}
+
+.range-container > h5 {
+  margin-left: 2vw;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+@media screen and (min-width: 690px) {
+  .newsletter-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+  }
+
+  .text-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+  .text-name strong {
+    color: rgb(255, 255, 255);
+    font-size: larger;
+  }
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-cover {
+    border-radius: 1em;
+    background-image: url(../assets/img/boyskate.jpg);
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    margin-top: 0rem;
+  }
+
+  .form-group {
+    margin: 0.5em 5em;
+  }
+
+  .primary-button {
+    margin: 1em;
+  }
+
+  label {
+    color: white;
+    font-weight: 600;
+  }
 }
 </style>

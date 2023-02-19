@@ -1,62 +1,45 @@
-<script setup>
-import SkateBoards from "../components/SkateBoards.vue";
-import ShoppingCart from "../components/ShoppingCart.vue";
-import AboutHeroImage from "../components/AboutHeroImage.vue";
-</script>
-
 <template>
-  <shopping-cart />
-  <about-hero-image />
+  <div class="head">
+    <h1>About us</h1>
+  </div>
 
-  <h1 class="title">{{ message }}</h1>
-  <div class="skateboards">
-    <div class="container text-center">
-      <div class="row align-items-start">
-        <skate-boards
-          v-for="board in boards"
-          :key="board.id"
-          :products="board"
-        />
-      </div>
-    </div>
+  <div class="container">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui debitis
+      asperiores, omnis ipsam ipsum officiis minus dolorem rerum beatae dolores
+      similique aut saepe atque repellendus fuga placeat velit vero corrupti
+      doloribus excepturi! Nulla, sit! Distinctio, iusto iste sequi, harum
+      excepturi blanditiis libero fugit reprehenderit voluptatibus non rem iure
+      velit unde.
+    </p>
+    <br />
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque error,
+      laboriosam nesciunt quia quam impedit similique deserunt reiciendis
+      blanditiis dicta tenetur. Quis provident, officiis cum nulla ipsum dolorum
+      amet doloribus atque impedit saepe obcaecati asperiores ex vero
+      accusantium nisi dolor.
+    </p>
+    <br />
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero id
+      distinctio, totam placeat velit nulla corrupti vero dignissimos, quo sit
+      alias. At ea veritatis similique dolore impedit. Autem doloribus ut, sequi
+      quam saepe voluptate at nisi, inventore molestias cum ducimus? Atque
+      blanditiis dolorum exercitationem rem error eos minus placeat eligendi.
+      Atque tenetur quasi consectetur. Quasi sit animi rerum cum nisi!
+    </p>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      message: "New Arrivals, spring 2023",
-      boards: [],
-    };
-  },
-  components: { "skate-boards": SkateBoards },
-  mounted() {
-    this.fetchData();
-  },
-  methods: {
-    async fetchData() {
-      const res = await fetch("arrivals.json");
-      const result = await res.json();
-      this.boards = result;
-    },
-  },
-};
-</script>
-
 <style scoped>
-.skateboards {
+.head {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
 }
-
-.title,
-h1 {
+.container {
+  padding: 1em;
   text-align: center;
-  margin-top: 10vh;
 }
 </style>
-
-<style></style>

@@ -9,7 +9,9 @@
             alt="Skateboard"
             id="button"
           />
-          <button class="position-button-left">LEFT</button>
+          <button @click="$router.push('/about')" class="position-button-left">
+            About
+          </button>
         </div>
       </div>
       <div>
@@ -37,7 +39,10 @@
             class="card-img-top"
             alt="Skateboard"
           />
-          <button @click="$router.push('/about')" class="position-button-right">
+          <button
+            @click="$router.push('/products')"
+            class="position-button-right"
+          >
             Boards
           </button>
         </div>
@@ -52,8 +57,12 @@ export default {};
 
 <style scoped>
 .image {
+  height: 25vh;
   display: flex;
   flex-direction: row;
+}
+.card-img-top {
+  height: 25vh;
 }
 
 .button-container {
@@ -84,12 +93,18 @@ export default {};
   border: 2px solid black;
 }
 
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 690px) {
   .position-button-left {
     bottom: 50%;
   }
   .position-button-right {
     bottom: 50%;
+  }
+  .image {
+    height: auto;
+  }
+  .card-img-top {
+    height: auto;
   }
 }
 </style>

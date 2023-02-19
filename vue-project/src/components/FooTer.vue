@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-12 mb-4">
           <h5 class="mb-3" style="letter-spacing: 2px; color: #818963">
-            footer content
+            Skate the store
           </h5>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque
@@ -15,7 +15,7 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="mb-3" style="letter-spacing: 2px; color: #818963">
-            links
+            Links
           </h5>
           <ul class="list-unstyled mb-0">
             <li class="mb-1">
@@ -34,17 +34,17 @@
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h5 class="mb-1" style="letter-spacing: 2px; color: #818963">
-            opening hours
+            Opening hours
           </h5>
           <table class="table" style="color: #4f4f4f; border-color: #666">
             <tbody>
               <tr>
                 <td>Mon - Fri:</td>
-                <td>8am - 9pm</td>
+                <td>8:00 - 19:00</td>
               </tr>
               <tr>
                 <td>Sat - Sun:</td>
-                <td>8am - 1am</td>
+                <td>10:00 - 16:00</td>
               </tr>
             </tbody>
           </table>
@@ -52,8 +52,8 @@
       </div>
     </div>
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      © 2023 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">SkateBoards.com</a>
     </div>
     <!-- Copyright -->
   </footer>
@@ -62,6 +62,6 @@
 
 <style scoped>
 footer {
-    margin-top: -0.1rem;
+  margin-top: -0.1rem;
 }
 </style>

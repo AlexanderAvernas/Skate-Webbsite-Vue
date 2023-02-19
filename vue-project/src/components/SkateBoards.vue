@@ -23,4 +23,11 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+</style>

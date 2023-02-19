@@ -42,7 +42,7 @@ const addMessage = () => {
 
 <style scoped>
 main {
-  margin-top: 10rem;
+  margin-top: 5vh;
   height: 5vh;
   width: 5vw;
 }

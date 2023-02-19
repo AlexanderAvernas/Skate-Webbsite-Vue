@@ -7,8 +7,7 @@ import FooTer from "./components/FooTer.vue";
 <template>
   <NavBar />
   <ChatContact />
-  <FooTer/>
+  <FooTer />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

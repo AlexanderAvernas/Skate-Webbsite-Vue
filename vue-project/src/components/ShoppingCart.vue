@@ -1,7 +1,9 @@
 <template>
   <h1>SKATEBOARDS</h1>
-  <p>Total: {{ totalPrice }}SEK</p>
-  <p>Antal Produkter {{ trackCounter }}</p>
+  <div class="cost-container">
+    <p>Total: {{ totalPrice }} SEK</p>
+    <p>Products: {{ trackCounter }}</p>
+  </div>
 
   <div class="col">
     <div class="card">
@@ -11,7 +13,7 @@
           <h5 class="card-title">{{ product.name }}</h5>
           <h6 class="card-text">{{ product.price }}</h6>
         </div>
-        <div>
+        <div class="button-container">
           <button
             class="primary-button"
             @click="
@@ -19,10 +21,10 @@
               addToCart(product.id);
             "
           >
-            Add To Cart
+            +
           </button>
           <button
-            class="primary-button"
+            class="primary-button minus"
             @click="
               decrementCounter();
               subtracFromCart(product.id);
@@ -88,7 +90,19 @@ export default {
 h1 {
   text-align: center;
   margin-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
+  color: rgb(220, 162, 1);
+}
+
+.cost-container {
+  font-size: medium;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+
+.cost-container p {
+  margin: 0;
+  margin-left: 0.5em;
 }
 
 .col {
@@ -108,10 +122,42 @@ h1 {
   text-align: center;
   border: 1px solid black;
   border-radius: 1rem;
-  margin: 5rem;
+  margin: 1rem;
   width: 18rem;
 }
 .primary-button {
-  margin-bottom: 1rem;
+  margin: 0.5em;
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .col {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .products-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 3rem;
+    width: 18rem;
+  }
+  .primary-button {
+    margin-bottom: 1rem;
+  }
 }
 </style>
